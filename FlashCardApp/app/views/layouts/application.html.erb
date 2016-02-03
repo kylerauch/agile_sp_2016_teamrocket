@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FlashCardApp</title>
+  <title>Flash Card Application</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Flash Card</h1>
+      </header>
+      <section class="content">
+        <%= yield %>
+      </section>
+      <footer>
+        <h4>Copyright <%=Date.today.year %> Our FlashCard</h4>
+      </footer>
+    </div>
+  </body>
 </html>
