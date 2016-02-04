@@ -16,6 +16,8 @@
 
 body {
   background-color: #FFFFCC;
+  margin: 0 50;
+  padding: 10px;
 }
 .container {
   color: #65016C;
@@ -26,5 +28,18 @@ body {
 .content {
   color: #920031;
   font-family: courier;
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
   text-align: center;
 }
+
+.deck_container{
+  position: relative;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
