@@ -19,6 +19,7 @@ body {
   margin: 0 50;
   padding: 10px;
 }
+
 .container {
   color: #65016C;
   font-family: verdana;
@@ -35,11 +36,26 @@ body {
 }
 
 .deck_container{
-  position: relative;
   margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.deck_container th {
+  padding: 10px;
+}
+
+.deck_container td {
+  padding: 10px;
 }
 
 h1 {
   font-size: 30px;
 }
+
+footer {
+  background-image: url('agileflashcard_teamrocket/agile_sp_2016_teamrocket/app/assets/images/teamrocket.png');
+}
+
+
 
