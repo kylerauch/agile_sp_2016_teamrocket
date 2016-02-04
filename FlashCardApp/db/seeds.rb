@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+first_deck = Deck.new(title: "first Deck")
+first_deck.save
+
+card = first_deck.cards.build(frontContent: "First Card")
+card.save
