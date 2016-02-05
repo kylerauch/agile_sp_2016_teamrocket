@@ -1,7 +1,11 @@
-<h1><%= @cards.frontContent %></h1>
-
-<h1><%= @cards.backContent %></h1>
-
-<h1><%= @cards.description %></h1>
-
-<%= link_to "Back", deck_cards_path(@decks) %>
+<div id = flashCard>
+    <div id = flashCardFront>
+        <h1><%= @cards.frontContent %></h1>
+        <%= link_to "Back", deck_cards_path(@decks) %>
+    </div> <!--end div flashCardFront -->
+    <div id = flashCardBack>
+        <h1><%= @cards.backContent %></h1>
+        <%= link_to "Front", deck_cards_path(@decks) %>
+    </div><!--end div flashCardBack-->
+</div> <!--end div flashCard -->
+<p><%= @cards.description %></p>
