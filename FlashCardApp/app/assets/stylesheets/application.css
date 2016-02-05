@@ -57,5 +57,18 @@ footer {
   background-image: url('agileflashcard_teamrocket/agile_sp_2016_teamrocket/app/assets/images/teamrocket.png');
 }
 
+#flashCard {
+  background-color: #ffffff;
+  color: #000000;
+  height: 420px;
+  padding: 50px;
+  text-align: center;
+  width: 680px; 
+}
+
+#flashCardBack{
+  visibility: hidden;
+}
+
 
 
