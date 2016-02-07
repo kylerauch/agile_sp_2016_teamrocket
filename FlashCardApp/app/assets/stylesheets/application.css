@@ -71,11 +71,21 @@ footer {
   height: 420px;
   width: 680px;
 }
+
 #flashCardBack{
   display: none;
   height: 420px;
   width: 680px;
 }
+
+#flipCardToBack {
+  color: #cccccc;
+}
+
+#flipCardToFront {
+  color: #cccccc;
+}
+
 
 
 
