@@ -66,8 +66,15 @@ footer {
   width: 680px; 
 }
 
+#flashCardFront{
+  display: block;
+  height: 420px;
+  width: 680px;
+}
 #flashCardBack{
-  visibility: hidden;
+  display: none;
+  height: 420px;
+  width: 680px;
 }
 
 
