@@ -1,13 +1,19 @@
 require 'test_helper'
 
 class CardsControllerTest < ActionController::TestCase
+  
+  setup do
+    @deck = Deck.first
+    @card = Card.first
+  end
+  
   test "should get index" do
-    get :index
+    get :index, deck_id: @deck.id
     assert_response :success
   end
 
   test "should get show" do
-    get :show
+    get :show, deck_id: @deck.id.show
     assert_response :success
   end
 
