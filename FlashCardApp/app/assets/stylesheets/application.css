@@ -15,13 +15,17 @@
  */
 
 body {
-  background-color: #FFFFCC;
+  background-image: url("teamrocket.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-color: #FFFFFF;
   margin: 0 50;
   padding: 10px;
 }
 
 .container {
-  color: #65016C;
+  color: #FF0000;
   font-family: verdana;
   text-align: center;
 }
@@ -29,10 +33,18 @@ body {
 .content {
   color: #920031;
   font-family: courier;
-  font-size: 20px;
+  font-size: 25px;
   padding: 10px;
   position: relative;
   text-align: center;
+}
+
+.content th {
+  color: #A60000;
+}
+
+.content td {
+  color: #CD0074;
 }
 
 .deck_container{
@@ -47,10 +59,11 @@ body {
 
 .deck_container td {
   padding: 10px;
+  
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 footer {
@@ -62,6 +75,7 @@ footer {
   box-shadow: 1px 1px 8px #000;
   color: #000000;
   height: 420px;
+  line-height: 30px;
   margin: 10%;
   margin-left: 25%;
   margin-right: 25%;
@@ -69,6 +83,7 @@ footer {
   text-align: center;
   width: 680px; 
 }
+
 
 #flashCardFront{
   display: block;
