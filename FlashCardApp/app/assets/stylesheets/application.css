@@ -15,9 +15,10 @@
  */
 
 body {
-  background-image: url("teamrocket.png");
+  /*background-image: url("teamrocket.png");*/
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-size:5em;
   background-attachment: fixed;
   background-color: #FFFFFF;
   margin: 0 50;
@@ -67,7 +68,7 @@ h1 {
 }
 
 footer {
-  background-image: url('agileflashcard_teamrocket/agile_sp_2016_teamrocket/app/assets/images/teamrocket.png');
+
 }
 
 #flashCard {
