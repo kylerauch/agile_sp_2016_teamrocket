@@ -13,39 +13,50 @@
  *= require_tree .
  *= require_self
  */
+html{
+  background-color:white;
+  height:100%;
+  
+}
 
 body {
-  /*background-image: url("teamrocket.png");*/
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size:5em;
-  background-attachment: fixed;
-  background-color: #FFFFFF;
-  margin: 0 50;
-  padding: 10px;
+  background-color: rgba(0,0,0,0.1);
+  position:relative;
+  margin:0 auto;
+  height:100%;
+}
+
+body a {
+  color:rgba(200,50,50,1);
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+body a:after {
+  color: white !important;
 }
 
 .container {
-  color: #FF0000;
-  font-family: verdana;
+/*  color: #FF0000;
+  font-family: verdana;*/
   text-align: center;
 }
 
 .content {
-  color: #920031;
+  /*color: #920031;
   font-family: courier;
-  font-size: 25px;
+  font-size: 25px;*/
   padding: 10px;
   position: relative;
   text-align: center;
 }
 
 .content th {
-  color: #A60000;
+  /*color: #A60000;*/
 }
 
 .content td {
-  color: #CD0074;
+  /*color: #CD0074;*/
 }
 
 .deck_container{
@@ -63,12 +74,15 @@ body {
   
 }
 
-h1 {
-  font-size: 40px;
+h1, h2, h3, h4, h5 {
+  font-family: 'Fjalla One', sans-serif;
 }
 
 footer {
-
+  position:absolute;
+  bottom:0px;
+  width:90%;
+  
 }
 
 #flashCard {
@@ -99,11 +113,11 @@ footer {
 }
 
 #flipCardToBack {
-  color: #cccccc;
+  color: rgba(0,0,0,0.5);
 }
 
 #flipCardToFront {
-  color: #cccccc;
+  color: rgba(0,0,0,0.5);
 }
 
 
