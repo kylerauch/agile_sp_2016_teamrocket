@@ -13,7 +13,7 @@ class CardsControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show, deck_id: @deck.id.show
+    get :show, deck_id: @deck.id
     assert_response :success
   end
 
