@@ -7,22 +7,21 @@
 <table class ="deck_container">
   <thead>
     <tr>
+      <th>Card</th>
       <th>Front</th>
       <th>Back</th>
-      <th>Description</th>
-      <th colspan="4"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @cards.each do |card| %>
       <tr>
+        <td><%= link_to card.description, deck_card_path(@decks, card) %></td>
         <td><%= card.frontContent %></td>
         <td><%= card.backContent %></td>
-        <td><%= card.description %></td>
-        <td><%= link_to 'Show', deck_card_path(@decks, card) %></td>
         <td><%= link_to 'Edit', edit_deck_card_path(@decks, card) %></td>
-        <td><%= link_to 'Destroy', deck_card_path(@decks, card), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', deck_card_path(@decks, card), method: :delete, data: { confirm: 'Are you sure you would like to delete this card?' } %></td>
       </tr>
     <% end %>
   </tbody>
