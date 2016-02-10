@@ -110,7 +110,7 @@ footer {
   
 }
 
-#flashCard {
+.flashCard {
   background-color: #ffffff;
   box-shadow: 1px 1px 8px #000;
   color: #000000;
@@ -122,25 +122,25 @@ footer {
 }
 
 
-#flashCardFront{
+.flashCardFront{
   display: table-cell;
   height: 420px;
   vertical-align: middle;
   width: 680px;
 }
 
-#flashCardBack{
+.flashCardBack{
   display: none;
   height: 420px;
   vertical-align: middle;
   width: 680px;
 }
 
-#flipCardToBack {
+.flipCardToBack {
   color: rgba(0,0,0,0.7);
 }
 
-#flipCardToFront {
+.flipCardToFront {
   color: rgba(0,0,0,0.7);
 }
 
