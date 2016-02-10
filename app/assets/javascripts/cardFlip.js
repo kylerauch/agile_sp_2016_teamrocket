@@ -1,7 +1,7 @@
 $(document).on('ready page:load', function () {
   ;$(function() {
     //Click "back" to see back of card
-    $('#flipCardToBack').click(function(){
+    $('#flashCardFront').click(function(){
       $('#flashCardFront').css({
         display: 'none'
       }),
@@ -10,7 +10,7 @@ $(document).on('ready page:load', function () {
       })
     })
     //Click "front" to see front of card
-    $('#flipCardToFront').click(function(){
+    $('#flashCardBack').click(function(){
       $('#flashCardFront').css({
         display: 'block'
       }),
