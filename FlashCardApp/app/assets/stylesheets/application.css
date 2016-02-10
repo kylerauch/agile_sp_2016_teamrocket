@@ -37,27 +37,16 @@ body a:after {
 }
 
 .container {
-/*  color: #FF0000;
-  font-family: verdana;*/
   text-align: center;
 }
 
 .content {
-  /*color: #920031;
-  font-family: courier;
-  font-size: 25px;*/
-  padding: 10px;
+  margin: 10px 10px;
+  padding: 20px;
   position: relative;
   text-align: center;
 }
 
-.content th {
-  /*color: #A60000;*/
-}
-
-.content td {
-  /*color: #CD0074;*/
-}
 
 .deck_container{
   margin: 0 auto;
@@ -67,16 +56,18 @@ body a:after {
 
 .deck_container th {
   padding: 10px;
+  text-align: center;
 }
 
 .deck_container td {
   padding: 10px;
-  
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Fjalla One', sans-serif;
 }
+
 
 footer {
   position:absolute;
