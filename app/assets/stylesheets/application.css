@@ -1,0 +1,149 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html{
+  background-color:white;
+  height:100%;
+  
+}
+
+body {
+  background-color: rgba(0,0,0,0.1);
+  position:relative;
+  margin:0 auto;
+  height:100%;
+}
+
+body a {
+  color:rgba(200,50,50,1);
+  font-weight:bold;
+  text-decoration:underline;
+}
+
+body a:after {
+  color: white !important;
+}
+
+.container {
+/*  color: #FF0000;
+  font-family: verdana;*/
+  text-align: center;
+}
+
+.content {
+  /*color: #920031;
+  font-family: courier;
+  font-size: 25px;*/
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.content th {
+  /*color: #A60000;*/
+}
+
+.tableHeader {
+  
+}
+
+.deckHead, .optHead {
+  border-right:solid 1px black;
+  border-left:solid 1px black;
+  background-color:rgba(255,255,255,0.5);
+}
+
+
+.content td {
+  /*color: #CD0074;*/
+  text-align:left;
+}
+
+td span {
+  font-weight:bold;
+}
+
+.deckDetails {
+  
+}
+
+.time {
+  text-align:center;
+}
+
+.deck_container{
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.deck_container th {
+  padding: 10px;
+}
+
+.deck_container td {
+  padding: 10px;
+  
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+footer {
+  position:absolute;
+  bottom:0px;
+  width:90%;
+  
+}
+
+#flashCard {
+  background-color: #ffffff;
+  box-shadow: 1px 1px 8px #000;
+  color: #000000;
+  height: 420px;
+  line-height: 30px;
+  margin: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 50px;
+  text-align: center;
+  width: 680px; 
+}
+
+
+#flashCardFront{
+  display: block;
+  height: 420px;
+  width: 680px;
+}
+
+#flashCardBack{
+  display: none;
+  height: 420px;
+  width: 680px;
+}
+
+#flipCardToBack {
+  color: rgba(0,0,0,0.5);
+}
+
+#flipCardToFront {
+  color: rgba(0,0,0,0.5);
+}
+
+
+
+

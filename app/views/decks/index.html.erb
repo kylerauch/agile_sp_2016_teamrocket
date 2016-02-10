@@ -1,0 +1,41 @@
+<div class ="wrapper">
+  <p id="notice"><%= notice %></p>
+  <h1>Listing Decks</h1>
+  <div class="col-sm-6 col-sm-offset-3">
+    <table class ="table">
+      <thead class="tableHeader">
+        <tr>
+          <th class="deckHead">Deck</th>
+          <th class="optHead">Options</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @decks.each do |deck| %>
+          <tr>
+            <td class="col-sm-6">
+              <span>Title:</span> <%= link_to deck.title, deck %>
+              <br>
+              <span>Description:</span> <%= deck.description %>
+              <br>
+              <span>Catagory:</span> <%= deck.category %>
+              <br>
+              <span>Author:</span> <%= deck.created_by %>
+            </td>
+            <td class="col-sm-6 deckOptions">
+              <%= link_to 'Edit', edit_deck_path(deck) %>
+              <br>
+              <%= link_to 'Manage Cards', deck_cards_path(deck) %>
+              <br>
+              <%= link_to 'Delete Deck', deck, method: :delete, data: { confirm: 'Are you sure you wish to delete this deck?' } %>
+            </td>
+          </tr>
+          <tr>
+            <td><span>Deck Created: </span><%= time_ago_in_words(deck.updated_at) + ' ago' %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'New Deck', new_deck_path %>
+  </div>
+</div>

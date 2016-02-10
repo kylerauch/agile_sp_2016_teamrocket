@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  frontContent: MyString
+  backContent: MyString
+  description: MyString
+  isTest: false
+  deck_id: 
+
+two:
+  frontContent: MyString
+  backContent: MyString
+  description: MyString
+  isTest: false
+  deck_id: 

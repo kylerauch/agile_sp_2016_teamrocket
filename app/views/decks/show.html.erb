@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @deck.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @deck.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @deck.category %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @deck.created_by %>
+</p>
+
+<%= link_to 'Edit', edit_deck_path(@deck) %> |
+<%= link_to 'Back', decks_path %>
