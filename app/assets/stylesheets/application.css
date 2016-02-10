@@ -37,15 +37,10 @@ body a:after {
 }
 
 .container {
-/*  color: #FF0000;
-  font-family: verdana;*/
   text-align: center;
 }
 
 .content {
-  /*color: #920031;
-  font-family: courier;
-  font-size: 25px;*/
   padding: 10px;
   position: relative;
   text-align: center;
@@ -78,16 +73,11 @@ tr {
 }
 
 .content td {
-  /*color: #CD0074;*/
   text-align:left;
 }
 
 .deckDetails span {
   font-weight:bold;
-}
-
-.deckDetails {
-  
 }
 
 .time {
