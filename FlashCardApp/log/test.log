@@ -1,0 +1,241 @@
+  [1m[36m (30.7ms)[0m  [1mCREATE TABLE "cards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "frontContent" varchar, "backContent" varchar, "description" varchar, "isTest" boolean DEFAULT 'f', "deck_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (11.9ms)[0m  [1mCREATE  INDEX "index_cards_on_deck_id" ON "cards" ("deck_id")[0m
+  [1m[35m (11.0ms)[0m  CREATE TABLE "decks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "category" varchar, "created_by" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (14.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (7.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160204192443')
+  [1m[36m (5.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160203042953')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "cards"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cards" ("frontContent", "backContent", "description", "isTest", "deck_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'f', NULL, '2016-02-07 22:54:21', '2016-02-07 22:54:21', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cards" ("frontContent", "backContent", "description", "isTest", "deck_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'f', NULL, '2016-02-07 22:54:21', '2016-02-07 22:54:21', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "decks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "decks" ("title", "description", "category", "created_by", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', '2016-02-07 22:54:21', '2016-02-07 22:54:21', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "decks" ("title", "description", "category", "created_by", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', '2016-02-07 22:54:21', '2016-02-07 22:54:21', 298486374)
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+CardsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+CardsControllerTest: test_should_get_show
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+CardsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+CardsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+DecksControllerTest: test_should_create_deck
+--------------------------------------------
+  [1m[36mDeck Load (0.3ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "decks"
+Processing by DecksController#create as HTML
+  Parameters: {"deck"=>{"category"=>"MyString", "created_by"=>"MyString", "description"=>"MyText", "title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "decks" ("title", "description", "category", "created_by", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "MyString"], ["description", "MyText"], ["category", "MyString"], ["created_by", "MyString"], ["created_at", "2016-02-07 22:54:21.391287"], ["updated_at", "2016-02-07 22:54:21.391287"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/decks/980190963
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "decks"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------
+DecksControllerTest: test_should_destroy_deck
+---------------------------------------------
+  [1m[36mDeck Load (0.2ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "decks"
+Processing by DecksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "decks" WHERE "decks"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/decks
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "decks"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+DecksControllerTest: test_should_show_deck
+------------------------------------------
+  [1m[35mDeck Load (0.1ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDeck Load (0.0ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered decks/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+DecksControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35mDeck Load (0.2ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DecksController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered decks/_form.html.erb (35.3ms)
+  Rendered decks/edit.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DecksControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mDeck Load (0.3ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DecksController#new as HTML
+  Rendered decks/_form.html.erb (2.7ms)
+  Rendered decks/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+DecksControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DecksController#index as HTML
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks"
+  Rendered decks/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+DecksControllerTest: test_should_update_deck
+--------------------------------------------
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DecksController#update as HTML
+  Parameters: {"deck"=>{"category"=>"MyString", "created_by"=>"MyString", "description"=>"MyText", "title"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/decks/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "cards"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "cards" ("frontContent", "backContent", "description", "isTest", "deck_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'f', NULL, '2016-02-08 00:09:26', '2016-02-08 00:09:26', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cards" ("frontContent", "backContent", "description", "isTest", "deck_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'f', NULL, '2016-02-08 00:09:26', '2016-02-08 00:09:26', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "decks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "decks" ("title", "description", "category", "created_by", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', '2016-02-08 00:09:26', '2016-02-08 00:09:26', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "decks" ("title", "description", "category", "created_by", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', '2016-02-08 00:09:26', '2016-02-08 00:09:26', 298486374)
+  [1m[36m (12.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+CardsControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+CardsControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+----------------------------------------
+CardsControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+CardsControllerTest: test_should_get_show
+-----------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------
+DecksControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mDeck Load (0.3ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DecksController#new as HTML
+  Rendered decks/_form.html.erb (73.5ms)
+  Rendered decks/new.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 104ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+DecksControllerTest: test_should_show_deck
+------------------------------------------
+  [1m[35mDeck Load (0.3ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered decks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+DecksControllerTest: test_should_destroy_deck
+---------------------------------------------
+  [1m[35mDeck Load (0.1ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "decks"[0m
+Processing by DecksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "decks" WHERE "decks"."id" = ?  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/decks
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "decks"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+DecksControllerTest: test_should_update_deck
+--------------------------------------------
+  [1m[36mDeck Load (0.2ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DecksController#update as HTML
+  Parameters: {"deck"=>{"category"=>"MyString", "created_by"=>"MyString", "description"=>"MyText", "title"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/decks/980190962
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+DecksControllerTest: test_should_create_deck
+--------------------------------------------
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "decks"
+Processing by DecksController#create as HTML
+  Parameters: {"deck"=>{"category"=>"MyString", "created_by"=>"MyString", "description"=>"MyText", "title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "decks" ("title", "description", "category", "created_by", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "MyString"], ["description", "MyText"], ["category", "MyString"], ["created_by", "MyString"], ["created_at", "2016-02-08 00:09:27.079885"], ["updated_at", "2016-02-08 00:09:27.079885"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/decks/980190963
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "decks"
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------
+DecksControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DecksController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered decks/_form.html.erb (18.8ms)
+  Rendered decks/edit.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+DecksControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mDeck Load (0.2ms)[0m  [1mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by DecksController#index as HTML
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks"
+  Rendered decks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
