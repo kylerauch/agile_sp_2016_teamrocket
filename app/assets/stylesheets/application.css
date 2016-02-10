@@ -21,10 +21,21 @@ html{
 
 body {
   background-color: rgba(0,0,0,0.1);
-  position:relative;
-  margin:0 auto;
   height:100%;
 }
+
+#wrap {
+  min-height:100%;
+  height:auto;
+  margin: 0 auto -40px;
+  padding:0 0 40px;
+}
+
+footer {
+  height:40px;
+  
+}
+
 
 body a {
   color:rgba(200,50,50,1);
@@ -34,16 +45,6 @@ body a {
 
 body a:after {
   color: white !important;
-}
-
-.container {
-  text-align: center;
-}
-
-.content {
-  padding: 10px;
-  position: relative;
-  text-align: center;
 }
 
 
@@ -99,16 +100,12 @@ tr {
   
 }
 
+
 h1, h2, h3, h4, h5 {
   font-family: 'Fjalla One', sans-serif;
+  text-align:center;
 }
 
-footer {
-  position:absolute;
-  bottom:0px;
-  width:90%;
-  
-}
 
 .flashCard {
   background-color: #ffffff;
