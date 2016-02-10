@@ -1,1 +1,16 @@
 <!--This file will be the html page that randomly shows a card from the deck -->
+<div class = "flashCard">
+  <div class = "flashCardFront">
+    <h1><%= @cards.frontContent %></h1>
+    <p class="flipCardToBack">Click to show Back</p>
+  </div> <!--end div flashCardFront -->
+  <div class = "flashCardBack">
+    <h1><%= @cards.backContent %></h1>
+    <p class="flipCardToFront">Click to show Front</p>
+  </div><!--end div flashCardBack-->
+</div> <!--end div flashCard -->
+<p><%= @cards.description %></p>
+<%= link_to "Back", deck_cards_path(@decks) %>
+<% content_for :javascript do %>      
+    <%= javascript_include_tag 'cardFlip.js' %>
+<% end %>
