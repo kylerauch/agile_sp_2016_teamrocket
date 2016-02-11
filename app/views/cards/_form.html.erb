@@ -2,7 +2,6 @@
   <% if @cards.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cards.errors.count, "error") %> prohibited this deck from being saved:</h2>
-
       <ul>
       <% @cards.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,20 +9,18 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :frontContent %><br>
-    <%= f.text_field :frontContent %>
-  </div>
-  <div class="field">
-    <%= f.label :backContent %><br>
-    <%= f.text_area :backContent %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div  id="hello" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5 hello">
+    <div class="field">
+      <%= f.label :frontContent %>: <%= f.text_field :frontContent %>
+    </div>
+    <div class="field">
+      <%= f.label :backContent %>: <%= f.text_area :backContent %>
+    </div>
+    <div class="field">
+      <%= f.label :description%>: <%= f.text_field :description %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
