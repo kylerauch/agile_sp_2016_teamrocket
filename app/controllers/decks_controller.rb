@@ -42,7 +42,7 @@ class DecksController < ApplicationController
   def update
     respond_to do |format|
       if @deck.update(deck_params)
-        format.html { redirect_to @deck, notice: 'Deck was successfully updated.' }
+        format.html { redirect_to decks_url, notice: 'Deck was successfully updated.' }
         format.json { render :show, status: :ok, location: @deck }
       else
         format.html { render :edit }
