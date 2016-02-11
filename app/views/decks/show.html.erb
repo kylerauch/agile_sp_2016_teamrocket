@@ -1,18 +1,33 @@
 <p id="notice"><%= notice %></p>
-<h2>Cards in <%= @deck.title %> Deck</h2>
+<h2><%= @deck.title %></h2>
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h1><%= @deck.title %></h1>
+      </div>
+      <% @deck.cards.each do |card| %>
+        <div class="item">
+          <h1>
+            <%= card.frontContent %>
+          </h1>
+        </div>
+      <% end %>
+    </div>
 
-<% @deck.cards.each do |card| %>
-  
-  Front: <%= card.frontContent %>
-  <br>
-  Back: <%= card.backContent %>
-  <br>
-  Description: <%= card.description %>
-  <br>
-  
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<%= link_to 'Edit', edit_deck_path(@deck) %> |
+<%= link_to 'Back', decks_path %>
+<% content_for :javascript do %>      
+<%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js", "data-turbolinks-eval" => false %>
 <% end %>
 
 
-
-<%= link_to 'Edit', edit_deck_path(@deck) %> |
-<%= link_to 'Back', decks_path %>
