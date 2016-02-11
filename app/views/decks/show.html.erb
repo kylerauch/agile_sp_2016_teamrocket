@@ -1,7 +1,16 @@
 <p id="notice"><%= notice %></p>
 <h2>Cards in <%= @deck.title %> Deck</h2>
 
-
+<% @deck.cards.each do |card| %>
+  
+  Front: <%= card.frontContent %>
+  <br>
+  Back: <%= card.backContent %>
+  <br>
+  Description: <%= card.description %>
+  <br>
+  
+<% end %>
 
 
 
