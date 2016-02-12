@@ -1,15 +1,15 @@
-<div class = "flashCard">
-  <div class = "flashCardFront">
+<div class="container-fluid">
+  <div class = "flashCardFront col-xs-10 col-sm-4 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 card">
     <h1><%= @cards.frontContent %></h1>
-    <p class="flipCardToBack">Click to show Back</p>
+    <h5 class="flipCardToBack">Click to show Back</h5>
   </div> <!--end div flashCardFront -->
-  <div class = "flashCardBack">
+  <div class = "flashCardBack col-xs-10 col-sm-4 col-md-4 col-lg-4 col-xs-offset-1 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 card">
     <h1><%= @cards.backContent %></h1>
-    <p class="flipCardToFront">Click to show Front</p>
+    <h5 class="flipCardToFront">Click to show Front</h5>
   </div><!--end div flashCardBack-->
 </div> <!--end div flashCard -->
-<p><%= @cards.description %></p>
-<%= link_to "Back", deck_cards_path(@decks) %>
+<h3><%= @cards.description %></h3>
+<h2><%= link_to "Back", deck_cards_path(@decks) %></h2>
 <% content_for :javascript do %>      
     <%= javascript_include_tag 'cardFlip.js' %>
 <% end %>
