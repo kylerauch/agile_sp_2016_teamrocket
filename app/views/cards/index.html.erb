@@ -1,27 +1,26 @@
 <h2>Cards in <%= @decks.title %></h2>
-<%= link_to "Back To Decks Page", decks_path(@decks) %>
-<br>
-<%= link_to "New card in deck", new_deck_card_path(@decks) %>
 
-<table class ="deck_container">
-  <thead>
-    <tr>
-      <th>Card</th>
-      <th>Front</th>
-      <th>Back</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="container-fluid">
     <% @cards.each do |card| %>
-      <tr>
-        <td><%= link_to card.description, deck_card_path(@decks, card) %></td>
-        <td><%= card.frontContent %></td>
-        <td><%= card.backContent %></td>
-        <td><%= link_to 'Edit', edit_deck_card_path(@decks, card) %></td>
-        <td><%= link_to 'Delete', deck_card_path(@decks, card), method: :delete, data: { confirm: 'Are you sure you would like to delete this card?' } %></td>
-      </tr>
+      <div class="cardContainer col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+        <div class="card cardFront col-xs-6 ">
+          <h4><%= card.frontContent %></h4>
+        </div>
+        <div class="card cardBack col-xs-6 ">
+          <h4><%= card.backContent %></h4>
+        </div>
+        <div class="col-xs-12">
+          <h5><%= link_to card.description, deck_card_path(@decks, card) %></h5>
+          <h5>
+            <%= link_to 'Edit', edit_deck_card_path(@decks, card) %> |
+            <%= link_to 'Delete', deck_card_path(@decks, card), method: :delete, data: { confirm: 'Are you sure you would like to delete this card?' } %>
+          </h5>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+<h3>
+  <%= link_to "Back To Decks Page", decks_path(@decks) %>
+  |
+  <%= link_to "New card in deck", new_deck_card_path(@decks) %>
+</h3>

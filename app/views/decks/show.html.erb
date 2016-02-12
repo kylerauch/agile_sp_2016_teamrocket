@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 <h2><%= @deck.title %></h2>
- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+ <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h1><%= @deck.title %></h1>
+        <div class="flashCard">
+          <div class="flashCardFront">
+            <h1><%= @deck.title %></h1>
+          </div>
+        </div>
       </div>
       <% @deck.cards.each do |card| %>
         <div class="item">
@@ -17,7 +21,9 @@
               <p class="flipCardToFront">Click to show Front</p>
             </div><!--end div flashCardBack-->
           </div> <!--end div flashCard -->
-          <p><%= card.description %></p>
+          <h1>
+            <%= card.description %>
+          </h1>
         </div>
       <% end %>
     </div>
@@ -32,13 +38,18 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-<%= link_to 'Edit', edit_deck_path(@deck) %> |
-<%= link_to 'Back', decks_path %>
+<h1>
+<%= link_to 'Edit Deck', edit_deck_path(@deck) %> |
+<%= link_to 'Back', decks_path %> |
+<%= link_to 'Manage Cards', deck_cards_path(@deck) %>
+</h1>
 <% content_for :javascript do %>      
     <%= javascript_include_tag 'cardFlip.js' %>
 <% end %>
 <% content_for :javascript do %>      
 <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
-<% end %>`
+<% end %>
+
+
 
 

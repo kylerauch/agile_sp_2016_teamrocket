@@ -21,7 +21,7 @@ html{
 
 body {
   background-color: rgba(0,0,0,0.1);
-  height:100%;
+  min-height:100%;
 }
 
 #wrap {
@@ -141,9 +141,16 @@ h1, h2, h3, h4, h5 {
   color: rgba(0,0,0,0.7);
 }
 
-#form{
+.cardContainer {
   
 }
 
+.card {
+  background-color:white;
+}
 
-
+.cardBack, .cardFront {
+  border:2px solid black;
+  border-radius:10px;
+  min-height:10em;
+}
