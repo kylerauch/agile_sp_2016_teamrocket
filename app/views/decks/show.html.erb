@@ -7,9 +7,17 @@
       </div>
       <% @deck.cards.each do |card| %>
         <div class="item">
-          <h1>
-            <%= card.frontContent %>
-          </h1>
+          <div class = "flashCard">
+            <div class = "flashCardFront">
+              <h1><%= @deck.cards.frontContent %></h1>
+              <p class="flipCardToBack">Click to show Back</p>
+            </div> <!--end div flashCardFront -->
+            <div class = "flashCardBack">
+              <h1><%= @deck.cards.backContent %></h1>
+              <p class="flipCardToFront">Click to show Front</p>
+            </div><!--end div flashCardBack-->
+          </div> <!--end div flashCard -->
+          <p><%= @cards.description %></p>
         </div>
       <% end %>
     </div>
@@ -27,7 +35,10 @@
 <%= link_to 'Edit', edit_deck_path(@deck) %> |
 <%= link_to 'Back', decks_path %>
 <% content_for :javascript do %>      
-<%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
+    <%= javascript_include_tag 'cardFlip.js' %>
 <% end %>
+<% content_for :javascript do %>      
+<%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
+<% end %>`
 
 
