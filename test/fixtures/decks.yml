@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  category: MyString
-  created_by: MyString
+  title: MLB All Time HR Leaders
+  description: All time HR leaders in a career
+  category: Sports
+  created_by: Kyle
+  style: Verdana
 
 two:
-  title: MyString
-  description: MyText
-  category: MyString
-  created_by: MyString
+  title: NFL All time leading rushers
+  description: All time rush leaders
+  category: Sports
+  created_by: Kyle
+  style: Times New Roman 
