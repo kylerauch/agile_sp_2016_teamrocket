@@ -9,15 +9,15 @@
         <div class="item">
           <div class = "flashCard">
             <div class = "flashCardFront">
-              <h1><%= @deck.cards.frontContent %></h1>
+              <h1><%= card.frontContent %></h1>
               <p class="flipCardToBack">Click to show Back</p>
             </div> <!--end div flashCardFront -->
             <div class = "flashCardBack">
-              <h1><%= @deck.cards.backContent %></h1>
+              <h1><%= card.backContent %></h1>
               <p class="flipCardToFront">Click to show Front</p>
             </div><!--end div flashCardBack-->
           </div> <!--end div flashCard -->
-          <p><%= @cards.description %></p>
+          <p><%= card.description %></p>
         </div>
       <% end %>
     </div>
