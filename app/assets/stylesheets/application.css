@@ -47,6 +47,12 @@ body a:after {
   color: white !important;
 }
 
+body a:visited{
+  color:rgba(200,50,50,1);
+  font-weight:bold;
+  text-decoration:underline;
+}
+
 
 .tableHeader {
   border-color:rgba(0,0,0,0) !important;
@@ -121,16 +127,12 @@ h1, h2, h3, h4, h5 {
 
 .flashCardFront{
   display: table-cell;
-  height: 420px;
   vertical-align: middle;
-  width: 680px;
 }
 
 .flashCardBack{
   display: none;
-  height: 420px;
   vertical-align: middle;
-  width: 680px;
 }
 
 .flipCardToBack {
@@ -147,6 +149,10 @@ h1, h2, h3, h4, h5 {
 
 .card {
   background-color:white;
+  min-height:30em;
+  border:2px solid black;
+  border-radius:10px;
+  box-shadow:3px 3px 5px rgba(0,0,0,0.5);
 }
 
 .cardBack, .cardFront {
