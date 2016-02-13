@@ -36,7 +36,7 @@ class DecksControllerTest < ActionController::TestCase
 
   test "should update deck" do
     patch :update, id: @deck, deck: { category: @deck.category, created_by: @deck.created_by, description: @deck.description, title: @deck.title }
-    assert_redirected_to deck_path(assigns(:deck))
+    assert_redirected_to decks_path
   end
 
   test "should destroy deck" do
