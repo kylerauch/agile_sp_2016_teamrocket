@@ -68,4 +68,8 @@ class CardsController < ApplicationController
     def set_deck
       @decks = Deck.find(params[:deck_id])
     end
+    
+  def shuffle
+    sort_by { rand }
+  end
 end
