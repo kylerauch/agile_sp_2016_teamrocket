@@ -72,4 +72,8 @@ class CardsController < ApplicationController
   def shuffle
     sort_by { rand }
   end
+  
+  def cardarray
+    @cardarray = Array.new
+  end
 end
