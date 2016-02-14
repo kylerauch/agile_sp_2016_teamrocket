@@ -4,7 +4,7 @@ class CardsControllerTest < ActionController::TestCase
   
   setup do
     @deck = Deck.first
-    @card = @deck.Card.first
+    @card = @deck.Cards.first
   end
   
   test "should get index" do
