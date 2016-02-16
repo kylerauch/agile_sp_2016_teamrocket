@@ -15,6 +15,8 @@
             <%= link_to 'Edit', edit_deck_card_path(@decks, card) %> |
             <%= link_to 'Delete', deck_card_path(@decks, card), method: :delete, data: { confirm: 'Are you sure you would like to delete this card?' } %>
           </h5>
+          <h5>Last Edited: <%= time_ago_in_words(card.updated_at) %> ago</h5>
+          <h5>Created: <%= time_ago_in_words(card.created_at) %> ago</h5>
         </div>
       </div>
     <% end %>

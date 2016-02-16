@@ -14,7 +14,8 @@
           <h5>Description: <%= deck.description %></h5>
           <h5>Category: <%= deck.category %></h5>
           <h5>Author: <%= deck.created_by %></h5>
-          <h5>Created: <%= time_ago_in_words(deck.updated_at) %> ago</h5>
+          <h5>Last Edited:<%= time_ago_in_words(deck.updated_at) %> ago</h5>
+          <h5>Created: <%= time_ago_in_words(deck.created_at) %> ago</h5>
         </div>
         <br>
         <div class="row optHead">
