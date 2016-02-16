@@ -26,8 +26,8 @@
       </div>
       <div class="row">
         <h4>
-          <%= f.label :category %><br>
-          <%= f.text_field :category %>
+          <%= f.label :category_id %><br>
+          <%= f.select :category_id, @categories, :include_blank => true %>
         </h4>
       </div>
       <div class="row">

@@ -1,5 +1,6 @@
 class DecksController < ApplicationController
   before_action :set_deck, only: [:show, :edit, :update, :destroy]
+  before_action :get_categories, :only =>[:new, :edit, :create, :update]
 
   # GET /decks
   # GET /decks.json
@@ -10,7 +11,6 @@ class DecksController < ApplicationController
   # GET /decks/1
   # GET /decks/1.json
   def show
-
   end
 
   # GET /decks/new
@@ -65,11 +65,15 @@ class DecksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_deck
-      @deck = Deck.find(params[:id])
+      @deck = Deck.includes(:category).find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deck_params
-      params.require(:deck).permit(:title, :description, :category, :created_by)
+      params.require(:deck).permit(:title, :description, :category_id, :created_by)
+    end
+    
+    def get_categories
+      @categories = Category.all.collect{|c| [c.name, c.id]}
     end
 end

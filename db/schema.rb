@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160212205055) do
+ActiveRecord::Schema.define(version: 20160216184315) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "frontContent"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 20160212205055) do
 
   add_index "cards", ["deck_id"], name: "index_cards_on_deck_id"
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "decks", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -33,8 +39,10 @@ ActiveRecord::Schema.define(version: 20160212205055) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "style_id"
+    t.integer  "category_id"
   end
 
+  add_index "decks", ["category_id"], name: "index_decks_on_category_id"
   add_index "decks", ["style_id"], name: "index_decks_on_style_id"
 
   create_table "styles", force: :cascade do |t|

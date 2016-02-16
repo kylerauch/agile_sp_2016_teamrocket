@@ -10,3 +10,14 @@ first_deck.save
 
 card = first_deck.cards.build(frontContent: "First Card")
 card.save
+
+
+# Record creation for categories
+Category.create name: 'History'
+Category.create name: 'Language'
+Category.create name: 'Literature'
+Category.create name: 'Math'
+Category.create name: 'Science'
+Category.create name: 'Music'
+Category.create name: 'Movies'
+Category.create name: 'Sports'
