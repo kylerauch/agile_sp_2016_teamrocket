@@ -1,7 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: History
 
 two:
-  name: MyString
+  name: Language
+
+three:
+  name: Literature
+  
+four:
+  name: Math
+  
+five:
+  name: Science
+  
+six:
+  name: Music
+  
+seven:
+  name: Movies
+  
+eight:
+  name: Sports
+  
