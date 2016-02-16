@@ -10,7 +10,3 @@ first_deck.save
 
 card = first_deck.cards.build(frontContent: "First Card")
 card.save
-
-Style.create name: 'Arial'
-Style.create name: 'Times New Roman'
-Style.create name: 'Verdana'
