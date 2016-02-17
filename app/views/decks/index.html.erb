@@ -4,32 +4,34 @@
   <h3><%= link_to 'New Deck', new_deck_path %></h3>
   <div class="container-fluid ">
       <% @decks.each do |deck| %>
-      <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 container-fluid card">
-        <div class="deckHead row">
-          <h5>Deck Information</h5>
-        </div>
-        <br>
-        <div class="row">
-          <h5>Title: <%= link_to deck.title, deck %></h5>
-          <h5>Description: <%= deck.description %></h5>
-          <h5>Category: <%= deck.category.name rescue "No category" %></h5>
-          <h5>Author: <%= deck.created_by %></h5>
-          <h5>Last Edited:<%= time_ago_in_words(deck.updated_at) %> ago</h5>
-          <h5>Created: <%= time_ago_in_words(deck.created_at) %> ago</h5>
-        </div>
-        <br>
-        <div class="row optHead">
-          <h5>Deck Options</h5>
-        </div>
-        <br>
-        <div class="row">
-          <h4>
-            <%= link_to 'Edit', edit_deck_path(deck) %>
-            |
-            <%= link_to 'Manage Cards', deck_cards_path(deck) %>
-            |
-            <%= link_to 'Delete Deck', deck, method: :delete, data: { confirm: 'Are you sure you wish to delete this deck?' } %>
-          </h4>
+      <div class="deckContainerIndex col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+        <div class="container-fluid card deckContainerDeck">
+          <div class="deckHead row">
+            <h5>Deck Information</h5>
+          </div>
+          <br>
+          <div class="row">
+            <h5>Title: <%= link_to deck.title, deck %></h5>
+            <h5>Description: <%= deck.description %></h5>
+            <h5>Category: <%= deck.category.name rescue "No category" %></h5>
+            <h5>Author: <%= deck.created_by %></h5>
+            <h5>Last Edited:<%= time_ago_in_words(deck.updated_at) %> ago</h5>
+            <h5>Created: <%= time_ago_in_words(deck.created_at) %> ago</h5>
+          </div>
+          <br>
+          <div class="row optHead">
+            <h5>Deck Options</h5>
+          </div>
+          <br>
+          <div class="row">
+            <h4>
+              <%= link_to 'Edit', edit_deck_path(deck) %>
+              |
+              <%= link_to 'Manage Cards', deck_cards_path(deck) %>
+              |
+              <%= link_to 'Delete Deck', deck, method: :delete, data: { confirm: 'Are you sure you wish to delete this deck?' } %>
+            </h4>
+          </div>
         </div>
       </div>
       <% end %>
