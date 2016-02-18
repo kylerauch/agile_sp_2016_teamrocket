@@ -128,13 +128,23 @@ h1, h2, h3, h4, h5 {
 }
 
 
-.flashCardFront{
+.cardFront, .flashCardFront{
   display: flex;
   align-items:center;
 }
 
-.flashCardBack{
+.cardBack, .flashCardBack{
   display: none;
+  align-items:center;
+}
+
+.cardFront{
+  display: flex;
+  align-items:center;
+}
+
+.cardBack{
+  display: flex;
   align-items:center;
 }
 
