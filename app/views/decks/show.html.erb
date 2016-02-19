@@ -56,10 +56,10 @@
 <% end %>
 <script>
 $(document).ready(function() {  
-    	$('#myCarousel').hammer().on('swipeleft', function(){
+    	$('.carousel-inner').hammer().on('swipeleft', function(){
   			$(this).carousel('next'); 
   		})
-  		$('#myCarousel').hammer().on('swiperight', function(){
+  		$('.carousel-inner').hammer().on('swiperight', function(){
   			$(this).carousel('prev'); 
   		})
  }); 
