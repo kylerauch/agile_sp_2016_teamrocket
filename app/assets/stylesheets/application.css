@@ -69,7 +69,9 @@ tr {
 .deckHead, .optHead {
   text-align:left;
   background-color:rgba(255,255,255,0.5);
-  box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(0,0,0,0.5);
+  border-radius:10px;
 }
 
 .deckDetails {
@@ -128,14 +130,24 @@ h1, h2, h3, h4, h5 {
 }
 
 
-.flashCardFront{
-  display: table-cell;
-  vertical-align: middle;
+.cardFront, .flashCardFront{
+  display: flex;
+  align-items:center;
 }
 
-.flashCardBack{
+.cardBack, .flashCardBack{
   display: none;
-  vertical-align: middle;
+  align-items:center;
+}
+
+.cardFront{
+  display: flex;
+  align-items:center;
+}
+
+.cardBack{
+  display: flex;
+  align-items:center;
 }
 
 .flipCardToBack {
@@ -146,6 +158,13 @@ h1, h2, h3, h4, h5 {
   color: rgba(0,0,0,0.7);
 }
 
+.flashCardText{
+  height:1000px;
+  justify-content:center;
+  align-items:center;
+  height: 100%;
+  width: 100%;
+}
 
 .card {
   background-color:white;
@@ -154,6 +173,7 @@ h1, h2, h3, h4, h5 {
   border-radius:10px;
   box-shadow:3px 3px 5px rgba(0,0,0,0.5);
 }
+
 
 .cardBack, .cardFront {
   border:2px solid black;

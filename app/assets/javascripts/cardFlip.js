@@ -6,13 +6,13 @@ $(document).on('ready page:load', function () {
         display: 'none'
       }),
       $('.flashCardBack').css({
-        display: 'table-cell'
+        display: 'flex'
       })
     })
     //Click "front" to see front of card
     $('.flashCardBack').click(function(){
       $('.flashCardFront').css({
-        display: 'table-cell'
+        display: 'flex'
       }),
       $('.flashCardBack').css({
         display: 'none'
