@@ -54,7 +54,16 @@
 <% content_for :javascript do %>      
 <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
 <% end %>
-
+<script>
+$(document).ready(function() {  
+    	$('#myCarousel').hammer().on('swipeleft', function(){
+  			$(this).carousel('next'); 
+  		})
+  		$('#myCarousel').hammer().on('swiperight', function(){
+  			$(this).carousel('prev'); 
+  		})
+ }); 
+</script>
 
 
 
