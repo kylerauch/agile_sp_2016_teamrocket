@@ -69,7 +69,9 @@ tr {
 .deckHead, .optHead {
   text-align:left;
   background-color:rgba(255,255,255,0.5);
-  box-shadow:0px 0px 5px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(0,0,0,0.5);
+  border-radius:10px;
 }
 
 .deckDetails {
