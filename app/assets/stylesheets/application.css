@@ -196,6 +196,24 @@ h1, h2, h3, h4, h5 {
   border-style: solid;
   border-width: 3px;
   box-shadow: 1px 1px 1px #000;
-  width: 100px;
-  height: 100px;
+}
+
+.cycleThroughCards {
+  position: relative;
+  float: left;
+  left: 600px;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 1px 1px 1px #000;
+  display: block;
+}
+
+.stopCyclingThroughCards {
+  position: relative;
+  float: left;
+  left: 600px;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 1px 1px 1px #000;
+  display: none;
 }
