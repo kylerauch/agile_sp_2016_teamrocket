@@ -1,5 +1,6 @@
-var cycleCards = null;
 $(document).ready(function() {
+  var cycleCards = null;
+  
   $('.cycleThroughCards').click(function(){
     cycleCards = setInterval(function(){ 
       $('#myCarousel').carousel('next');
@@ -10,17 +11,16 @@ $(document).ready(function() {
     $('.stopCyclingThroughCards').css({
       display: 'block'
     });
-    /* NOT FUNCTIONING YET!
-    $('.stopCyclingThroughCards').click(function(){
-      clearInterval(cycleCards);
-      cycleCards = null;
-      $('.cycleThroughCards').css({
-        display: 'block'
-      }),
-      $('.stopCyclingThroughCards').css({
-        display: 'none'
-      });
+  });
+   
+  $('.stopCyclingThroughCards').click(function(){
+    clearInterval(cycleCards);
+    cycleCards = null;
+    $('.cycleThroughCards').css({
+      display: 'block'
+    }),
+    $('.stopCyclingThroughCards').css({
+      display: 'none'
     });
-    */
   });
 });
