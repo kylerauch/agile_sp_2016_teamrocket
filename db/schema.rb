@@ -11,17 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217045054) do
+ActiveRecord::Schema.define(version: 20160221204618) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "frontContent"
     t.string   "backContent"
     t.string   "description"
-    t.boolean  "isTest",       default: false
+    t.boolean  "isTest",                   default: false
     t.integer  "deck_id"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.boolean  "disabled"
+    t.string   "image_front_file_name"
+    t.string   "image_front_content_type"
+    t.integer  "image_front_file_size"
+    t.datetime "image_front_updated_at"
+    t.string   "image_back_file_name"
+    t.string   "image_back_content_type"
+    t.integer  "image_back_file_size"
+    t.datetime "image_back_updated_at"
   end
 
   add_index "cards", ["deck_id"], name: "index_cards_on_deck_id"

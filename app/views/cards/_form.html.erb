@@ -14,7 +14,15 @@
       <%= f.label "Front" %>: <%= f.text_area :frontContent %>
     </div>
     <div class="field">
+      <%= f.label "Front Image" %>: <%= f.file_field :image_front %>
+      <%= f.label "Preview" %>:<br /><%= image_tag @cards.image_front.url(:thumb) %>
+    </div>
+    <div class="field">
       <%= f.label "Back" %>: <%= f.text_area :backContent %>
+    </div>
+    <div class="field">
+      <%= f.label "Back Image" %>: <%= f.file_field :image_back %>
+      <%= f.label "Preview" %>:<br /><%= image_tag @cards.image_back.url(:thumb) %>
     </div>
     <div class="field">
       <%= f.label "Description" %>: <%= f.text_field :description %>

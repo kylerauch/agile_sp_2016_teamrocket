@@ -6,11 +6,17 @@
         <div class="card cardFront col-xs-6 ">
           <div class="flashCardText">
             <h4><%= card.frontContent %></h4>
+            <% if card.image_front.url(:thumb) != '/image_fronts/thumb/missing.png' %>
+            <%= image_tag card.image_front.url(:thumb) %>
+            <% end %>
           </div>
         </div>
         <div class="card cardBack col-xs-6 ">
           <div class="flashCardText">
             <h4><%= card.backContent %></h4>
+            <% if card.image_back.url(:thumb) != '/image_backs/thumb/missing.png' %>
+            <%= image_tag card.image_back.url(:thumb) %>
+            <% end %>
           </div>
         </div>
         <div class="col-xs-12">
