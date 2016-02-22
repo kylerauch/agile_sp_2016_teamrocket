@@ -56,6 +56,10 @@ class CardsController < ApplicationController
   def destroy
     @cards = @decks.cards.find(params[:id])
     
+    @cards.image_front = nil
+    @cards.image_back = nil
+    @cards.save
+    
     @cards.destroy
     respond_to do |format|
       format.html { redirect_to deck_cards_path(@decks), notice: 'Card was successfully destroyed.' }

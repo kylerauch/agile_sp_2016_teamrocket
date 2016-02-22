@@ -27,8 +27,10 @@ gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'hammerjs_rails'
-gem 'paperclip', '~> 4.3', '>= 4.3.5'
+gem 'paperclip', '~> 4.3', '>= 4.3.5'  
+#MUST ALSO INSTALL ImageMagick using command below
 #sudo apt-get install imagemagick -y
+
 #gem 'devise'
 #gem 'omniauth-facebook'
 
