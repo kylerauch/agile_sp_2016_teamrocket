@@ -45,18 +45,21 @@
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="drawRandomCard" href="#myCarousel" role="button">Random Card</a>
-    <a class="cycleThroughCards" href="#myCarousel" role="button">Cycle</a>
-    <a class="stopCyclingThroughCards" href="#myCarousel" role="button">Stop</a>
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
+<h3>
+  <a class="stopCyclingThroughCards" href="#myCarousel" role="button">Stop</a> 
+  <a class="cycleThroughCards" href="#myCarousel" role="button">Cycle</a> |
+  <a class="drawRandomCard" href="#myCarousel" role="button">Random Card</a> 
+</h3>
 <h1>
-<%= link_to 'Edit Deck', edit_deck_path(@deck) %> |
-<%= link_to 'Manage Cards', deck_cards_path(@deck) %> |
-<%= link_to 'Back', decks_path %>
+  <br>
+  <%= link_to 'Edit Deck', edit_deck_path(@deck) %> |
+  <%= link_to 'Manage Cards', deck_cards_path(@deck) %> |
+  <%= link_to 'Back', decks_path %>
 </h1>
 <% content_for :javascript do %>      
     <%= javascript_include_tag 'cardFlip.js' %>
