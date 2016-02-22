@@ -9,29 +9,60 @@
       </ul>
     </div>
   <% end %>
-  <div  id="hello" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-5 col-sm-offset-5 col-md-offset-5 col-lg-offset-5 hello">
-    <div class="field">
-      <%= f.label "Front" %>: <%= f.text_area :frontContent %>
-    </div>
-    <div class="field">
-      <%= f.label "Front Image" %>: <%= f.file_field :image_front %>
-      <%= f.label "Preview" %>:<br /><%= image_tag @cards.image_front.url(:thumb) %>
-    </div>
-    <div class="field">
-      <%= f.label "Back" %>: <%= f.text_area :backContent %>
-    </div>
-    <div class="field">
-      <%= f.label "Back Image" %>: <%= f.file_field :image_back %>
-      <%= f.label "Preview" %>:<br /><%= image_tag @cards.image_back.url(:thumb) %>
-    </div>
-    <div class="field">
-      <%= f.label "Description" %>: <%= f.text_field :description %>
-    </div>
-    <div class="field">
-      <%= f.label "Disabled" %>: <%= f.check_box :disabled %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
+  
+  <div class="container-fluid">
+    <div  id="hello" class="col-xs-12 col-sm-4 col-md-2 col-lg-2 col-sm-offset-4 col-md-offset-5 col-lg-offset-5 hello">
+      <div class="row">
+        <h4>
+          <%= f.label "Front" %><br>
+          <%= f.text_area :frontContent %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Front Image" %><br>
+          <%= f.file_field :image_front %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Preview" %><br>
+          <%= image_tag @cards.image_front.url(:thumb) %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Back" %><br>
+          <%= f.text_area :backContent %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Back Image" %><br>
+          <%= f.file_field :image_back %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Preview" %><br>
+          <%= image_tag @cards.image_back.url(:thumb) %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Description" %><br> 
+          <%= f.text_field :description %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%= f.label "Disabled" %><br> 
+          <%= f.check_box :disabled %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4><%= f.submit %></h4>
+      </div>
     </div>
   </div>
 <% end %>
