@@ -28,6 +28,9 @@
         </nav>
       </header>
       <section class="container-fluid">
+        <nav>
+          <%=link_to 'Home', controller: 'decks', action: 'index' %>
+        </nav>
         <%= yield %>
       </section>
     </div>
