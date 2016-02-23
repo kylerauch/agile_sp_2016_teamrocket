@@ -14,6 +14,12 @@
     <div  id="hello" class="col-xs-12 col-sm-4 col-md-2 col-lg-2 col-sm-offset-4 col-md-offset-5 col-lg-offset-5 hello">
       <div class="row">
         <h4>
+          <%= f.label "Description" %><br> 
+          <%= f.text_field :description %>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
           <%= f.label "Front" %><br>
           <%= f.text_area :frontContent %>
         </h4>
@@ -46,12 +52,6 @@
         <h4>
           <%= f.label "Preview" %><br>
           <%= image_tag @cards.image_back.url(:thumb) %>
-        </h4>
-      </div>
-      <div class="row">
-        <h4>
-          <%= f.label "Description" %><br> 
-          <%= f.text_field :description %>
         </h4>
       </div>
       <div class="row">
