@@ -6,6 +6,11 @@ class DecksController < ApplicationController
   # GET /decks.json
   def index
     @decks = Deck.all
+    if params[:q]
+      @decks = Deck.find_all_by_query(params[:q])
+    else
+      @decks = Deck.all
+    end
   end
 
   # GET /decks/1
