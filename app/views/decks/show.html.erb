@@ -51,8 +51,10 @@
     </a>
   </div>
 <h3>
-  <a class="stopCyclingThroughCards" href="#myCarousel" role="button">Stop</a> 
-  <a class="cycleThroughCards" href="#myCarousel" role="button">Cycle</a> |
+  <a class="stopCyclingThroughCards" href="#myCarousel" role="button">Stop</a>
+  <a class="cycleThroughCardsFast" href="#myCarousel" role="button">Fast Cycle</a>
+  <a class="cycleThroughCards" href="#myCarousel" role="button">Medium Cycle</a>
+  <a class="cycleThroughCardsSlow" href="#myCarousel" role="button">Slow Cycle</a>|
   <a class="drawRandomCard" href="#myCarousel" role="button">Random Card</a> 
 </h3>
 <h1>
@@ -64,7 +66,7 @@
 <% content_for :javascript do %>      
     <%= javascript_include_tag 'cardFlip.js' %>
     <%= javascript_include_tag 'randomcard.js' %>
-    <%= javascript_include_tag 'cycleThroughCards.js' %>
+    <%= javascript_include_tag 'cycleThroughCards.' %>
 <% end %>
 <% content_for :javascript do %>      
 <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
