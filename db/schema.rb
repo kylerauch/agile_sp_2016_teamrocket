@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221204618) do
+ActiveRecord::Schema.define(version: 20160225173256) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "frontContent"
@@ -47,12 +47,12 @@ ActiveRecord::Schema.define(version: 20160221204618) do
     t.string   "created_by"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "style_id"
     t.integer  "category_id"
+    t.text     "font_style"
+    t.text     "font_size"
   end
 
   add_index "decks", ["category_id"], name: "index_decks_on_category_id"
-  add_index "decks", ["style_id"], name: "index_decks_on_style_id"
 
   create_table "styles", force: :cascade do |t|
     t.string   "name"

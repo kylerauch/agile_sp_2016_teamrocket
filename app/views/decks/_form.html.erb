@@ -32,6 +32,22 @@
       </div>
       <div class="row">
         <h4>
+          <%=f.label :font_style %><br>
+          <div class="select">
+            <%= f.select :font_style, ['Arial', 'Georgia', 'Times New Roman', 'Verdana'], :prompt => 'Please Select' %>
+          </div>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
+          <%=f.label :font_size %><br>
+          <div class="select">
+            <%= f.select :font_size, ['2', '3', '4', '5'], :prompt => 'Please Select' %>
+          </div>
+        </h4>
+      </div>
+      <div class="row">
+        <h4>
           <%= f.label :created_by %><br>
           <%= f.text_field :created_by %>
         </h4>
