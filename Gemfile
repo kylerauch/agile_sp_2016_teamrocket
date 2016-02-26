@@ -31,7 +31,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.5'
 #MUST ALSO INSTALL ImageMagick using command below
 #sudo apt-get install imagemagick -y
 
-#gem 'devise'
+gem 'devise'
 #gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
