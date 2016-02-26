@@ -16,6 +16,8 @@ Devise.setup do |config|
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+  
+  config.omniauth :twitter, "b5KO5NOrbMDioiNTIL1OtIi4h", "a3ZlConyXFuXJF1OS0FaRltNounE6dWfafuHcrBM47js4U8A2e"
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and

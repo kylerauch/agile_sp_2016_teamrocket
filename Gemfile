@@ -32,6 +32,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.5'
 #sudo apt-get install imagemagick -y
 
 gem 'devise'
+gem 'omniauth-twitter'
 #gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
