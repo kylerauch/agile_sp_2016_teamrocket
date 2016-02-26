@@ -35,8 +35,13 @@
               <li><a href="#">Page 3</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.email %></strong>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+              <% else %>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= link_to "Sign up", new_user_registration_path %></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <%= link_to "Login", new_user_session_path %></a></li>
+              <% end %> 
             </ul>
           </div>
         </div>

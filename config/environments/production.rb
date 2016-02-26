@@ -77,5 +77,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   
+  config.action_mailer_default_url_options = { host => 'localhost: 2525'}
+  
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end
