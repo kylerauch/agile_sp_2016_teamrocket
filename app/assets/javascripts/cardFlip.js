@@ -2,26 +2,26 @@ $(document).on('ready page:load', function () {
   var randomCard;
   var currentCard;
   var cycleCards;
-  ;$(function() {
-    //Click "back" to see back of card
-    $('.flashCardFront').click(function(){
-      $('.flashCardFront').css({
-        display: 'none'
-      }),
-      $('.flashCardBack').css({
-        display: 'flex'
-      })
-    })
-    //Click "front" to see front of card
-    $('.flashCardBack').click(function(){
-      $('.flashCardFront').css({
-        display: 'flex'
-      }),
-      $('.flashCardBack').css({
-        display: 'none'
-      })
-    })
-  })
+  
+  //Click "back" to see back of card
+  $('.flashCardFront').click(function(){
+    $('.flashCardFront').css({
+      display: 'none'
+    }),
+    $('.flashCardBack').css({
+      display: 'flex'
+    });
+  });
+  
+  //Click "front" to see front of card
+  $('.flashCardBack').click(function(){
+    $('.flashCardFront').css({
+      display: 'flex'
+    }),
+    $('.flashCardBack').css({
+      display: 'none'
+    });
+  });
   
   //draw a random card from the deck
   $('.drawRandomCard').click(function(){
@@ -31,12 +31,14 @@ $(document).on('ready page:load', function () {
       randomCard = Math.floor((Math.random() * $('.item').length) + 1);
     }
     $('#myCarousel').carousel(randomCard).fadein(3000);
-  })
-    var cycleCards = null;
+  });
   
-    $('.stopCyclingThroughCards').css({
-      display: 'none'
-    });
+  //cycle through cards
+  var cycleCards = null;
+  
+  $('.stopCyclingThroughCards').css({
+    display: 'none'
+  });
   
   $('.cycleThroughCards').click(function(){
     clearInterval(cycleCards);
@@ -113,5 +115,13 @@ $(document).on('ready page:load', function () {
     $('.stopCyclingThroughCards').css({
       display: 'none'
     });
+  });
+  
+  $('.carousel-inner').hammer().on('swipeleft', function(){
+		$(this).carousel('next'); 
+	});
+	
+	$('.carousel-inner').hammer().on('swiperight', function(){
+		$(this).carousel('prev'); 
   });
 });
