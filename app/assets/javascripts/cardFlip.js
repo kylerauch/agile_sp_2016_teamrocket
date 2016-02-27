@@ -1,4 +1,4 @@
-$(document).on('ready page:load', function () {
+$(document).ready(function () {
   var randomCard;
   var currentCard;
   var cycleCards;

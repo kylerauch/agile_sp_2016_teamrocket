@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require hammer
 //= require twitter/bootstrap
 //= require turbolinks
+//= require_self
 //= require_tree .
 
