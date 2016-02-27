@@ -10,9 +10,6 @@ class CardsController < ApplicationController
   # GET /decks/:deck_id/cards/:id
   def show
     @cards = @decks.cards.find(params[:id])
-    # <%= image_tag @cards.image_front.url %>
-    # <%= image_tag @cards.image_front.url(:medium) %>
-    # <%= image_tag @cards.image_front.url(:thumb) %>
   end
   
   # GET /decks/:deck_id/cards/new
@@ -68,7 +65,7 @@ class CardsController < ApplicationController
   end
   
   def card_params
-    params.require(:card).permit(:frontContent, :backContent, :description, :disabled, :image_front, :image_back)
+    params.require(:card).permit(:frontContent, :backContent, :description, :disabled, :image_front, :image_back, :image_front_remote_url, :image_back_remote_url )
   end
   
   private

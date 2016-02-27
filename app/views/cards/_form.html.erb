@@ -1,4 +1,4 @@
-<%= form_for([@decks, @cards]) do |f| %>
+<%= form_for [@decks, @cards], :html => { :multipart => true } do |f| %>
   <% if @cards.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cards.errors.count, "error") %> prohibited this deck from being saved:</h2>
@@ -26,8 +26,10 @@
       </div>
       <div class="row">
         <h4>
-          <%= f.label "Front Image" %><br>
-          <%= f.file_field :image_front %>
+          <%= f.label "Front Image Upload" %><br>
+          <%= f.file_field :image_front, size: 45%>
+          <%= f.label "Front Image URL" %>
+          <%= f.text_field :image_front_remote_url, size: 45, :placeholder => 'paste image url here...' %>
         </h4>
       </div>
       <div class="row">
@@ -44,8 +46,10 @@
       </div>
       <div class="row">
         <h4>
-          <%= f.label "Back Image" %><br>
+          <%= f.label "Back Image Upload" %>
           <%= f.file_field :image_back %>
+          <%= f.label "Back Image URL" %>
+          <%= f.text_field :image_back_remote_url, size: 45, :placeholder => 'paste image url here...' %>
         </h4>
       </div>
       <div class="row">
