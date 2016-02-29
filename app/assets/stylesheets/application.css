@@ -190,24 +190,32 @@ nav {
   text-align: center;
 }
 
-/*.drawRandomCard {
-  position: relative;
-  left: 400px;
+.cycleThroughCards {
+  background-color: #FFFFCC;
   border-style: solid;
   border-width: 3px;
+  border-color: #FF0000;
   box-shadow: 1px 1px 1px #000;
+  padding: 6px;
 }
 
-.cycleThroughCards {
-  position: relative;
-  float: left;
-  left: 600px;
+.cycleThroughCardsFast {
+  background-color: #FFFFCC;
   border-style: solid;
   border-width: 3px;
+  border-color: #FF0000;
   box-shadow: 1px 1px 1px #000;
-  display: block;
+  padding: 6px;
 }
-*/
+
+.cycleThroughCardsSlow {
+  background-color: #FFFFCC;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #FF0000;
+  box-shadow: 1px 1px 1px #000;
+  padding: 6px;
+}
 
 .stopCyclingThroughCards {
   background-color: #FF0000;
@@ -216,9 +224,10 @@ nav {
   box-shadow: 1px 1px 1px #000;
   color: #FFFFFF;
   display: none;
+  margin-bottom: 30px;
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
-  top: 30px;
+  top: 34px;
 }
