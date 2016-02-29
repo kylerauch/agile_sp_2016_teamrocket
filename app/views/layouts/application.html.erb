@@ -31,17 +31,16 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <% if user_signed_in? %>
-                Logged in as <strong><%= current_user.username %></strong>
-                <%= link_to 'Edit Profile', edit_user_registration_path %>
-                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                <li><a href="#">Logged in as <strong><%= current_user.username %></strong></a></li>
+                <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= link_to "Sign up", new_user_registration_path %></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> <%= link_to "Login", new_user_session_path %></a></li>
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
                 <li><%= link_to "Sign up with Twitter", user_omniauth_authorize_path(:twitter) %></li>
               <% end %> 
             </ul>
