@@ -97,11 +97,6 @@ tr {
   position: relative;
 }
 
-.deckContainerIndex {
-  
-  
-}
-
 .deck_container th {
   padding: 10px;
 }
@@ -159,7 +154,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .flashCardText{
-  height:1000px;
   justify-content:center;
   align-items:center;
   height: 100%;
