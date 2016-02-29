@@ -24,7 +24,8 @@ $(document).ready(function () {
   });
   
   //draw a random card from the deck
-  $('.drawRandomCard').click(function(){
+  // need to fix this
+  /*$('.drawRandomCard').click(function(){
     currentCard = randomCard;
     randomCard = Math.floor((Math.random() * $('.item').length) + 1);
     while (randomCard == currentCard) {
@@ -32,6 +33,7 @@ $(document).ready(function () {
     }
     $('#myCarousel').carousel(randomCard).fadein(3000);
   });
+  */
   
   //cycle through cards
   var cycleCards = null;
