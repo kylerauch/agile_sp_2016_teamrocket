@@ -51,7 +51,7 @@ $(document).ready(function () {
     $('.cycleThroughCards').css({
       color: '#00C000',
       'border-color': '#00FF00',
-      'box-shadow': '1px 1px 20px #00FF00'
+      'box-shadow': '5px 5px 20px #00FF00'
     });
     $('.cycleThroughCardsFast').css({
       color: '#C60000',
@@ -79,7 +79,7 @@ $(document).ready(function () {
     $('.cycleThroughCardsFast').css({
       color: '#00C000',
       'border-color': '#00FF00',
-      'box-shadow': '1px 1px 20px #00FF00'
+      'box-shadow': '5px 5px 25px #00FF00'
     });
     $('.cycleThroughCards').css({
       color: '#C60000',
@@ -107,7 +107,7 @@ $(document).ready(function () {
     $('.cycleThroughCardsSlow').css({
       color: '#00C000',
       'border-color': '#00FF00',
-      'box-shadow': '1px 1px 20px #00FF00'
+      'box-shadow': '5px 5px 25px #00FF00'
     });
     $('.cycleThroughCardsFast').css({
       color: '#C60000',
