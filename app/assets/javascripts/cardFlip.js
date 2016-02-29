@@ -52,10 +52,10 @@ $(document).ready(function () {
       color: '#0000FF'
     });
     $('.cycleThroughCardsFast').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.cycleThroughCardsSlow').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'inline'
@@ -72,10 +72,10 @@ $(document).ready(function () {
       color: '#0000FF'
     });
     $('.cycleThroughCards').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.cycleThroughCardsSlow').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'inline'
@@ -92,10 +92,10 @@ $(document).ready(function () {
       color: '#0000FF'
     });
     $('.cycleThroughCardsFast').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.cycleThroughCards').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'inline'
@@ -106,13 +106,13 @@ $(document).ready(function () {
     clearInterval(cycleCards);
     cycleCards = null;
     $('.cycleThroughCardsSlow').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.cycleThroughCardsFast').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.cycleThroughCards').css({
-      color: '#FF0000'
+      color: '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'none'
