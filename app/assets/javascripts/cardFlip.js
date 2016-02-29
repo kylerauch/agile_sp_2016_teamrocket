@@ -51,7 +51,7 @@ $(document).ready(function () {
     $('.cycleThroughCards').css({
       color: '#00C000',
       'border-color': '#00FF00',
-      'box-shadow': '5px 5px 20px #00FF00'
+      'box-shadow': '5px 5px 25px #00FF00'
     });
     $('.cycleThroughCardsFast').css({
       color: '#C60000',
