@@ -213,14 +213,18 @@ nav {
   box-shadow: 1px 1px 1px #000;
   display: block;
 }
+*/
 
 .stopCyclingThroughCards {
-  position: relative;
-  float: left;
-  left: 600px;
+  background-color: #FF0000;
   border-style: solid;
   border-width: 3px;
   box-shadow: 1px 1px 1px #000;
+  color: #FFFFFF;
   display: none;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  top: 30px;
 }
-*/
