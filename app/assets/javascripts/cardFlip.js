@@ -31,7 +31,7 @@ $(document).ready(function () {
     while (randomCard == currentCard) {
       randomCard = Math.floor((Math.random() * $('.item').length) + 1);
     }
-    $('#myCarousel').carousel(randomCard).fadein(3000);
+    $('#myCarousel').carousel(randomCard).fadeIn(3000);
   });
   */
   
