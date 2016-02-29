@@ -49,13 +49,21 @@ $(document).ready(function () {
       $('#myCarousel').carousel('next');
     }, 6000);
     $('.cycleThroughCards').css({
-      color: '#0000FF'
+      color: '#00C000',
+      'border-color': '#00FF00',
+      'box-shadow': '1px 1px 20px #00FF00'
     });
     $('.cycleThroughCardsFast').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.cycleThroughCardsSlow').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'inline'
@@ -69,13 +77,21 @@ $(document).ready(function () {
       $('#myCarousel').carousel('next');
     }, 3000);
     $('.cycleThroughCardsFast').css({
-      color: '#0000FF'
+      color: '#00C000',
+      'border-color': '#00FF00',
+      'box-shadow': '1px 1px 20px #00FF00'
     });
     $('.cycleThroughCards').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.cycleThroughCardsSlow').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'inline'
@@ -89,13 +105,21 @@ $(document).ready(function () {
       $('#myCarousel').carousel('next');
     }, 10000);
     $('.cycleThroughCardsSlow').css({
-      color: '#0000FF'
+      color: '#00C000',
+      'border-color': '#00FF00',
+      'box-shadow': '1px 1px 20px #00FF00'
     });
     $('.cycleThroughCardsFast').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.cycleThroughCards').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'inline'
@@ -106,13 +130,22 @@ $(document).ready(function () {
     clearInterval(cycleCards);
     cycleCards = null;
     $('.cycleThroughCardsSlow').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.cycleThroughCardsFast').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.cycleThroughCards').css({
-      color: '#C60000'
+      color: '#C60000',
+      'box-shadow': 'none',
+      'box-shadow': '1px 1px 1px #000',
+      'border-color': '#C60000'
     });
     $('.stopCyclingThroughCards').css({
       display: 'none'
